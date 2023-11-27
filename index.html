@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Speech Recognition Azure</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="#">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">  
+
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mt-5">Azure Speech Recognition </h1>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="textToSpeech">Text to Speech:</label>
+              <td><textarea id="text_to_speech" class="form-control" ></textarea></td>
+            </div>
+            <div class="text-center">
+              <button id="speakButton" class="btn btn-success">Speak</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="languageSelect">Select Language:</label>
+              <select id="languageSelect" class="form-control">
+                <option value="en-US">English</option>
+                <option value="es-ES">Spanish </option>
+                <!-- Add more language options as needed -->
+              </select>
+            </div>
+            <div class="text-center">
+              <button id="startButton" class="btn btn-primary">Start Listening</button>
+              <button id="stopButton" class="btn btn-secondary">Stop Listening</button>
+              <button id="clearButton" class="btn btn-danger">Clear Result</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="form-group">
+            <td><textarea id="result" class="form-control" readonly></textarea></td>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+  <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+  <script src="script.js"></script>
+</body>
+</html>
